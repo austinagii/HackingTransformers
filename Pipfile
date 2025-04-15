@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+torch = "==2.6.0"
+jupyterlab = "*"
+numpy = "==2.2.3"
+jupyter = "*"
+
+[dev-packages]
+jupyterlab = "*"
+
+[requires]
+python_version = "3.12"
+python_full_version = "3.12.4"
