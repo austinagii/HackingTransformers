@@ -24,7 +24,7 @@ def main():
     train_dataset = dataset['train']
 
     tokenizer = Tokenizer().train(train_dataset, TEXT_COLUMN_NAME, BATCH_SIZE, VOCAB_SIZE)
-    model = Model(VOCAB_SIZE, EMBEDDING_SIZE)
+    model = Model(VOCAB_SIZE, EMBEDDING_SIZE, CONTEXT_SIZE)
     for epoch in range(NUM_EPOCHS):
         batches = to_batches(tokenizer, train_dataset, BATCH_SIZE, CONTEXT_SIZE)
         for batch in batches:
