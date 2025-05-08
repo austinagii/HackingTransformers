@@ -29,9 +29,8 @@ class Embedding(nn.Module):
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """Returns the embedding for the given token ids.
 
-        `x` is expected to be a tensor of shape (..., batch_size) where each element
-        is an integer representing a token id. The token ids are expected to be in the range
-        [0, vocab_size). If the token ids are outside of this range, the behavior is undefined. 
+        `x` is expected to be a tensor of shape (..., batch_size) where each 
+        element is an integer in the range [0, vocab_size) representing a token id. 
         If `x` has only one dimension, the batch size is assumed to be 1.
 
         Args:
